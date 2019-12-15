@@ -1,0 +1,53 @@
+% AMS系，定理環境，太字
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{bm}
+
+% フォント・スクリプト文字
+\usepackage{newtxtext, newtxmath}
+\usepackage{mathrsfs}
+
+% 図・表・箇条書き
+\usepackage{tikz}
+\usepackage{booktabs}
+\usepackage{enumerate}
+\usepackage{graphicx}
+
+% アルゴリズム
+\usepackage{algorithm, algorithmic}
+
+% 索引
+\usepackage{makeidx}
+
+% その他
+\usepackage{url, color}
+
+% 不等号のデザイン変更
+\renewcommand{\ge}{\geqslant}
+\renewcommand{\le}{\leqslant}
+
+% 数式環境の改行を許す．
+\allowdisplaybreaks[4]
+
+% 数式番号を "(節番号.数式番号)" とする．
+\numberwithin{equation}{section}
+
+% jsarticleのための付録の表示調整
+%
+% 付録は以下のように書く
+% > \section{ ...通常の節... }
+% > ......
+% > \section{ ...通常の節... }
+% >
+% > % 付録開始
+% > \appendix
+% > \AppendixSection{ ...付録の節... }
+% > ......
+% > \AppendixSection{ ...付録の節... }
+\newcommand{\AppendixSection}[1]{
+\def\thesection{付録\Alph{section}} %
+\section{#1} %
+\def\thesection{\Alph{section}}}
+
+% 定理環境設定
+\theoremstyle{definition}
+

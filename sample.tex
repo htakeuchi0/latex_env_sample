@@ -1,0 +1,55 @@
+\documentclass[twocolumn, uplatex, dvipdfmx]{jsarticle}
+
+% タイトル，著者，日付
+\title{タイトル}
+\author{著者}
+\date{日付}
+ 
+% 使用パッケージの読み込み
+\usepackage{sample}
+
+% 参照確認用
+% \usepackage{refcheck}
+
+% 索引に必要
+\makeindex
+
+% 本文は日本語で記述する．
+% 句読点として原則全角カンマ＋全角ピリオドを使用するが，
+% 直前が英数字や数式の場合は，半角カンマや半角ピリオドを使うこともある．
+% 句点，読点は使用しない．
+\begin{document}
+
+% タイトル，著者，日付の出力
+\maketitle
+
+\begin{abstract}
+	% 索引用のindexコマンドは，\index{よみ@索引語}と記述する．よみは省略できる．
+	% 別の索引後にリンクさせたい場合は \index{よみ@索引語|see{リンク先索引語}} とする．
+	本稿は\LaTeX\index{latex@\LaTeX}のサンプルファイルである．
+\end{abstract}
+
+\section{サンプル}
+
+以下の式，
+\begin{align}
+	e^{iz}=\cos z+i\sin z,\quad z\in\mathbb{C}\label{euler1}
+\end{align}
+は，オイラーの公式 (Euler's formula) %
+\index{おいらーのこうしき@オイラーの公式}\index{Euler's formula|see{オイラーの公式}}%
+と呼ばれる\cite{sugiura:1980:1}．
+式\eqref{euler1}において $z=\pi$ とおくことで得られる等式 $e^{i\pi}+1=0$ はオイラーの等式 (Euler's identity) %
+\index{おいらーのとうしき@オイラーの等式}\index{Euler's identity|see{オイラーの等式}}%
+と呼ばれる\cite{wiki:eulersidentity}.
+
+% 参考文献．引用タグは "筆頭著者:発行年:同一発行年文献の区別用記号" など．
+% インターネット上の文献の場合は規定しない．
+\begin{thebibliography}{9}
+	\bibitem{sugiura:1980:1} 杉浦 光夫，基礎数学2 解析入門I, 東京大学出版会，東京，1980.
+	\bibitem{wiki:eulersidentity} Wikipedia, Euler's identity - Wikipedia, \\\url{https://en.wikipedia.org/wiki/Euler%27s_identity}, 最終閲覧2019年12月14日.
+\end{thebibliography}
+
+% 索引の出力
+\printindex
+
+\end{document}

@@ -274,3 +274,7 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+## [Added] Output Documents:
+*.pdf
+
